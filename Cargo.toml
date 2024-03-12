@@ -8,7 +8,7 @@ edition = "2021"
 homepage = "https://github.com/mootoday/rust-clap-nested-commands"
 include = ["src/**/*", "LICENSE", "README.md"]
 keywords = ["cli", "clap", "nested commands"]
-license-file = "LICENSE.txt"
+license-file = "LICENSE"
 readme = "README.md"
 repository = "https://github.com/mootoday/rust-clap-nested-commands"
 

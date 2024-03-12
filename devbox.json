@@ -1,0 +1,28 @@
+{
+  "packages": [
+    "rustup@latest",
+    "libiconv@latest",
+    "pkg-config@latest",
+    "openssl@latest",
+    "darwin.apple_sdk.frameworks.Security",
+    "darwin.apple_sdk.frameworks.SystemConfiguration"
+  ],
+  "env": {
+    "PROJECT_DIR": "$PWD"
+  },
+  "shell": {
+    "init_hook": [
+      ". .conf/devbox/set-env.sh",
+      "rustup default stable",
+      "cargo fetch"
+    ],
+    "scripts": {
+      "build":      "cargo build",
+      "build-docs": "cargo doc",
+      "start":      "cargo run",
+      "run_test": [
+        "cargo test -- --show-output"
+      ]
+    }
+  }
+}

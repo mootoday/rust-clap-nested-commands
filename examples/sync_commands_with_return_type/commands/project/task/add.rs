@@ -1,4 +1,3 @@
-use anyhow::Error;
 use clap::Args;
 use crate::cli_context::CliContext;
 
@@ -10,7 +9,7 @@ pub struct Command {
     pub description: String,
 }
 
-pub async fn execute(_cli_context: &CliContext, _cmd: Command) -> Result<(), Error> {
-    // TODO: Wait for 500ms to illustrate an async operation
-    Ok(())
+pub fn execute(_cli_context: &CliContext, cmd: Command) -> String {
+    // TODO: Print something meaningful
+    format!("Task added: {}", cmd.description)
 }

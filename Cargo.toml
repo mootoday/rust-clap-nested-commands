@@ -1,6 +1,6 @@
 [package]
 name = "clap-nested-commands"
-version = "0.0.1"
+version = "0.1.0"
 categories = ["command-line-interface"]
 description = "Rust macros to automate the definitions for nested commands in a clap CLI"
 documentation = "https://github.com/mootoday/rust-clap-nested-commands"

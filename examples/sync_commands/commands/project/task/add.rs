@@ -5,6 +5,7 @@ use crate::cli_context::CliContext;
 #[derive(Debug, Args)]
 pub struct Command {
     /// The description of the task to add
+    #[arg(long)]
     pub description: String,
 }
 

@@ -10,7 +10,7 @@ pub struct Command {
     pub description: String,
 }
 
-pub async fn execute(_cli_context: &CliContext, _cmd: Command) -> Result<(), Error> {
+pub async fn execute(_cli_context: &CliContext, cmd: Command) -> Result<String, Error> {
     // TODO: Wait for 500ms to illustrate an async operation
-    Ok(())
+    Ok(format!("Task added: {}", cmd.description))
 }

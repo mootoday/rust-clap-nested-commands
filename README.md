@@ -92,6 +92,8 @@ pub fn execute(_cli_context: &CliContext, _cmd: Command) {
 }
 ```
 
+**Note**: If you want to return data from your commands, see the `sync_commands_with_return_type` example.
+
 ### Async commands
 
 *The only difference compared to sync commands is the use of the `generate_async_commands` macro.*
@@ -139,12 +141,18 @@ pub async fn execute(_cli_context: &CliContext, _cmd: Command) -> Result<(), Err
 }
 ```
 
+**Note**: If you want to return data from your commands, see the `async_commands_with_return_type` example.
+
 ## Examples
 
 See `./examples` for both a sync and an async example. To run them, use the following commands:
 
 * `cargo run --example async_commands <sub-commands>`
   * E.g. `cargo run --example async_commands project user add --email name@domain.com`
+* `cargo run --example async_commands_with_return_type <sub-commands>`
+  * E.g. `cargo run --example async_commands_with_return_type project user add --email name@domain.com`
 * `cargo run --example sync_commands <sub-commands>`
   * E.g. `cargo run --example sync_commands project user add --email name@domain.com`
+* `cargo run --example sync_commands_with_return_type <sub-commands>`
+  * E.g. `cargo run --example sync_commands_with_return_type project user add --email name@domain.com`
   

@@ -5,6 +5,7 @@ use crate::cli_context::CliContext;
 #[derive(Debug, Args)]
 pub struct Command {
     /// The email address of the user to remove
+    #[arg(long)]
     pub email: String,
 }
 

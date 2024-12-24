@@ -5,6 +5,7 @@ use crate::cli_context::CliContext;
 #[derive(Debug, Args)]
 pub struct Command {
     /// The id of the task to remove
+    #[arg(long)]
     pub id: String,
 }
 

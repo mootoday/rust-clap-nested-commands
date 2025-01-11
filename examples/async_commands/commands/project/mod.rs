@@ -1,6 +1,6 @@
+use crate::cli_context::CliContext;
 use clap::{Args, Subcommand};
 use clap_nested_commands::generate_async_commands;
-use crate::cli_context::CliContext;
 
 mod task;
 mod user;
@@ -12,4 +12,9 @@ pub struct Command {
     pub command: Commands,
 }
 
-generate_async_commands!(task, user);
+generate_async_commands!(
+    #[command(alias = "tasks")]
+    task,
+    #[command(alias = "users")]
+    user
+);

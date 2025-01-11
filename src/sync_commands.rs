@@ -1,13 +1,14 @@
 #[macro_export]
 macro_rules! generate_sync_commands {
-    ($($module:ident),*) => (
-        generate_sync_commands!(return_type = (); $($module),*);
+    ($($(#[$attr:meta])* $module:ident),*) => (
+        generate_sync_commands!(return_type = (); $($(#[$attr])* $module),*);
     );
-    (return_type = $return_type:ty; $($module:ident),*) => (
+    (return_type = $return_type:ty; $($(#[$attr:meta])* $module:ident),*) => (
       paste::paste! {
         #[derive(Debug, Subcommand)]
         pub enum Commands {
             $(
+                $(#[$attr])*
                 [<$module:camel>]($module::Command),
         )*
         }
